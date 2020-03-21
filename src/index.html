@@ -12,10 +12,50 @@
   <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
 
+  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@4.7.4/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@4.7.4/dist/ionicons/ionicons.js"></script>
+
 </head>
 <body>
 
   <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+
+  <!-- <neo-tournament-category-list-view data="'{categories:[{title: 'test'}, {title: 'omg'}]}'">
+
+  </neo-tournament-category-list-view> -->
+
+  <neo-tournament-category-list-view>
+  </neo-tournament-category-list-view>
+
+
+  <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+          const tournamentCategoryListViewData = {
+            categories: [
+              {
+                title: 'Men Masters'
+              },
+              {
+                title: 'Men Advanced'
+              },
+              {
+                title: 'Men Amateur'
+              },
+              {
+                title: 'Men Double'
+              },
+              {
+                title: 'Mix Double'
+              },
+              {
+                title: 'Juniors'
+              },
+            ]
+          }
+          const tournamentCategoryListView = document.querySelector('neo-tournament-category-list-view');
+          tournamentCategoryListView.data = tournamentCategoryListViewData;
+        })
+    </script>
 
 </body>
 </html>
