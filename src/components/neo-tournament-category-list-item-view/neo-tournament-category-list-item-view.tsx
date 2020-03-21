@@ -1,5 +1,5 @@
 import { Component, ComponentInterface, Host, h, Prop } from '@stencil/core';
-import { TournamentCategoryListItemI } from '../neo-tournament-category-list-view/tournament-category-list-item.model';
+import { TournamentCategoryListItemI } from './tournament-category-list-item.model';
 
 @Component({
   tag: "neo-tournament-category-list-item-view",

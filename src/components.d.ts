@@ -5,8 +5,8 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { TournamentCategoryListItemI, } from "./components/neo-tournament-category-list-view/tournament-category-list-item.model";
-import { TournamentCategoryList, } from "./components/neo-tournament-category-list-item-view/tournament-category-list.model";
+import { TournamentCategoryListItemI, } from "./components/neo-tournament-category-list-view/tournament-category-list.model";
+import { TournamentCategoryList, } from "./components/neo-tournament-category-list-item-view/tournament-category-list-item.model";
 export namespace Components {
     interface MyComponent {
         /**
