@@ -27,6 +27,18 @@ export class MyComponent {
   }
 
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+    return [
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          <ion-card-title>Card Title</ion-card-title>
+        </ion-card-header>
+        ,
+        <ion-card-content>
+          {this.getText()}
+        </ion-card-content>
+      </ion-card>
+    ];
+    // <div>Hello, World! I'm {this.getText()}</div>;
   }
 }
