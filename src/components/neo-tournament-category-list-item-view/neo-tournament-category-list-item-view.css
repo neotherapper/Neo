@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .ion-hide-lg-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .ion-hide-lg-up {
+    display: none !important;
+  }
+}
