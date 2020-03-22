@@ -33,5 +33,12 @@
   "license": "MIT",
   "dependencies": {
     "@ionic/core": "^5.0.5"
+  },
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/stencil@0.0.15"
+    },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
   }
 }
