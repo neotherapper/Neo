@@ -7,12 +7,16 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { TournamentCategoryListItemI, } from "./components/neo-tournament-category-list-item-view/tournament-category-list-item.model";
 import { TournamentCategoryList, } from "./components/neo-tournament-category-list-view/tournament-category-list.model";
+import { TennisMatchI, } from "./components/tennis-match/tennis-match.model";
 export namespace Components {
     interface NeoTournamentCategoryListItemView {
         "data": TournamentCategoryListItemI;
     }
     interface NeoTournamentCategoryListView {
         "data": TournamentCategoryList;
+    }
+    interface TennisMatch {
+        "match": TennisMatchI;
     }
     interface TennisMatches {
     }
@@ -30,6 +34,12 @@ declare global {
         prototype: HTMLNeoTournamentCategoryListViewElement;
         new (): HTMLNeoTournamentCategoryListViewElement;
     };
+    interface HTMLTennisMatchElement extends Components.TennisMatch, HTMLStencilElement {
+    }
+    var HTMLTennisMatchElement: {
+        prototype: HTMLTennisMatchElement;
+        new (): HTMLTennisMatchElement;
+    };
     interface HTMLTennisMatchesElement extends Components.TennisMatches, HTMLStencilElement {
     }
     var HTMLTennisMatchesElement: {
@@ -39,6 +49,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "neo-tournament-category-list-item-view": HTMLNeoTournamentCategoryListItemViewElement;
         "neo-tournament-category-list-view": HTMLNeoTournamentCategoryListViewElement;
+        "tennis-match": HTMLTennisMatchElement;
         "tennis-matches": HTMLTennisMatchesElement;
     }
 }
@@ -49,11 +60,15 @@ declare namespace LocalJSX {
     interface NeoTournamentCategoryListView {
         "data"?: TournamentCategoryList;
     }
+    interface TennisMatch {
+        "match"?: TennisMatchI;
+    }
     interface TennisMatches {
     }
     interface IntrinsicElements {
         "neo-tournament-category-list-item-view": NeoTournamentCategoryListItemView;
         "neo-tournament-category-list-view": NeoTournamentCategoryListView;
+        "tennis-match": TennisMatch;
         "tennis-matches": TennisMatches;
     }
 }
@@ -63,6 +78,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "neo-tournament-category-list-item-view": LocalJSX.NeoTournamentCategoryListItemView & JSXBase.HTMLAttributes<HTMLNeoTournamentCategoryListItemViewElement>;
             "neo-tournament-category-list-view": LocalJSX.NeoTournamentCategoryListView & JSXBase.HTMLAttributes<HTMLNeoTournamentCategoryListViewElement>;
+            "tennis-match": LocalJSX.TennisMatch & JSXBase.HTMLAttributes<HTMLTennisMatchElement>;
             "tennis-matches": LocalJSX.TennisMatches & JSXBase.HTMLAttributes<HTMLTennisMatchesElement>;
         }
     }
