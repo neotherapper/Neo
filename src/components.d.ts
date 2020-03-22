@@ -14,6 +14,8 @@ export namespace Components {
     interface NeoTournamentCategoryListView {
         "data": TournamentCategoryList;
     }
+    interface TennisMatches {
+    }
 }
 declare global {
     interface HTMLNeoTournamentCategoryListItemViewElement extends Components.NeoTournamentCategoryListItemView, HTMLStencilElement {
@@ -28,9 +30,16 @@ declare global {
         prototype: HTMLNeoTournamentCategoryListViewElement;
         new (): HTMLNeoTournamentCategoryListViewElement;
     };
+    interface HTMLTennisMatchesElement extends Components.TennisMatches, HTMLStencilElement {
+    }
+    var HTMLTennisMatchesElement: {
+        prototype: HTMLTennisMatchesElement;
+        new (): HTMLTennisMatchesElement;
+    };
     interface HTMLElementTagNameMap {
         "neo-tournament-category-list-item-view": HTMLNeoTournamentCategoryListItemViewElement;
         "neo-tournament-category-list-view": HTMLNeoTournamentCategoryListViewElement;
+        "tennis-matches": HTMLTennisMatchesElement;
     }
 }
 declare namespace LocalJSX {
@@ -40,9 +49,12 @@ declare namespace LocalJSX {
     interface NeoTournamentCategoryListView {
         "data"?: TournamentCategoryList;
     }
+    interface TennisMatches {
+    }
     interface IntrinsicElements {
         "neo-tournament-category-list-item-view": NeoTournamentCategoryListItemView;
         "neo-tournament-category-list-view": NeoTournamentCategoryListView;
+        "tennis-matches": TennisMatches;
     }
 }
 export { LocalJSX as JSX };
@@ -51,6 +63,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "neo-tournament-category-list-item-view": LocalJSX.NeoTournamentCategoryListItemView & JSXBase.HTMLAttributes<HTMLNeoTournamentCategoryListItemViewElement>;
             "neo-tournament-category-list-view": LocalJSX.NeoTournamentCategoryListView & JSXBase.HTMLAttributes<HTMLNeoTournamentCategoryListViewElement>;
+            "tennis-matches": LocalJSX.TennisMatches & JSXBase.HTMLAttributes<HTMLTennisMatchesElement>;
         }
     }
 }
