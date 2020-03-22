@@ -1,5 +1,10 @@
 :host {
   display: block;
+  font-size: 80%;
+  line-height: 1.231;
+  position: relative;
+  overflow-x: hidden;
+  background: #fff;
 }
 
 abbr,
@@ -76,6 +81,60 @@ table {
 th {
   font-weight: 400;
   text-align: left;
+}
+
+a {
+  word-wrap: break-word;
+  cursor: pointer;
+  color: inherit;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: none;
+}
+
+strong {
+  font-weight: 600;
+}
+
+abbr,
+em,
+span,
+strong {
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+
+abbr,
+em,
+span {
+  font-style: normal;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #000;
 }
 
 /* Helpers */
@@ -372,14 +431,14 @@ th {
   border-top: 3px solid #e1e1e1;
 }
 
-.matches-container .matches .opponents li {
+.matches-container .matches .opponents .match-team {
   min-height: 113px;
   position: relative;
   margin-bottom: 50px;
   width: 100%;
 }
 
-.matches-container .matches .opponents li:after {
+.matches-container .matches .opponents .match-team:after {
   position: absolute;
   content: "";
   top: 50%;
@@ -390,7 +449,7 @@ th {
   border-top: 1px solid #e1e1e1;
 }
 
-.matches-container .matches .opponents li:before {
+.matches-container .matches .opponents .match-team:before {
   position: absolute;
   content: "";
   top: 50%;
@@ -401,7 +460,7 @@ th {
   border-left: 1px solid #e1e1e1;
 }
 
-.matches-container .matches .opponents li:last-child:before {
+.matches-container .matches .opponents .match-team:last-child:before {
   display: none;
 }
 
@@ -409,23 +468,23 @@ th {
   margin-bottom: 212px;
 }
 
-.matches-container .matches.m-center li {
+.matches-container .matches.m-center .match-team {
   margin-top: 213px;
 }
 
-.matches-container .matches.m-center li:first-child {
+.matches-container .matches.m-center .match-team:first-child {
   margin-top: 82px;
 }
 
-.matches-container .matches.m-center li:before {
+.matches-container .matches.m-center .match-team:before {
   height: 326px;
 }
 
-.matches-container .matches.m-center li table {
+.matches-container .matches.m-center .match-team table {
   position: relative;
 }
 
-.matches-container .matches.m-center li table:before {
+.matches-container .matches.m-center .match-team table:before {
   position: absolute;
   content: "";
   top: 50%;
@@ -439,20 +498,20 @@ th {
   padding-top: 50px;
 }
 
-.matches-container .matches.m-right li {
+.matches-container .matches.m-right .match-team {
   margin: 244px 0;
 }
 
-.matches-container .matches.m-right li:after,
-.matches-container .matches.m-right li:before {
+.matches-container .matches.m-right .match-team:after,
+.matches-container .matches.m-right .match-team:before {
   display: none;
 }
 
-.matches-container .matches.m-right li table {
+.matches-container .matches.m-right .match-team table {
   position: relative;
 }
 
-.matches-container .matches.m-right li table:before {
+.matches-container .matches.m-right .match-team table:before {
   position: absolute;
   content: "";
   top: 50%;
@@ -520,15 +579,15 @@ th {
     padding-top: 0;
   }
 
-  .matches-container .matches.m-center li {
+  .matches-container .matches.m-center .match-team {
     margin: 0 0 50px;
   }
 
-  .matches-container .matches.m-center li:first-child {
+  .matches-container .matches.m-center .match-team:first-child {
     margin-top: 0;
   }
 
-  .matches-container .matches.m-center li:before {
+  .matches-container .matches.m-center .match-team:before {
     height: 163px;
   }
 
@@ -536,7 +595,7 @@ th {
     padding-top: 0;
   }
 
-  .matches-container .matches.m-right li {
+  .matches-container .matches.m-right .match-team {
     margin: 0 0 50px;
   }
 }

@@ -7390,10 +7390,34 @@ export class TennisMatches implements ComponentInterface {
     return (
       <Host>
         <div class="matches-container">
-          <section class="matches">
+          <section class="matches show-only-on-small-size">
             <h3 class="like-h3">{this.matches[0].matchData.roundLabel}</h3>
             {this.matches.map(matchData => (
-                <tennis-match match={matchData}></tennis-match>
+              <tennis-match match={matchData}></tennis-match>
+            ))}
+          </section>
+          <section class="matches show-only-on-medium-size">
+            <h3 class="like-h3">{this.matches[0].matchData.roundLabel}</h3>
+            {this.matches.map(matchData => (
+              <tennis-match match={matchData}></tennis-match>
+            ))}
+          </section>
+          <section class="matches show-only-on-medium-size">
+            <h3 class="like-h3">{this.matches[0].matchData.roundLabel}</h3>
+            {this.matches.map(matchData => (
+              <tennis-match match={matchData}></tennis-match>
+            ))}
+          </section>
+          <section class="matches show-only-on-large-size">
+            <h3 class="like-h3">{this.matches[0].matchData.roundLabel}</h3>
+            {this.matches.map(matchData => (
+              <tennis-match match={matchData}></tennis-match>
+            ))}
+          </section>
+          <section class="matches show-only-on-large-size">
+            <h3 class="like-h3">{this.matches[0].matchData.roundLabel}</h3>
+            {this.matches.map(matchData => (
+              <tennis-match match={matchData}></tennis-match>
             ))}
           </section>
         </div>
