@@ -5,37 +5,27 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { TournamentCategoryListItemI, } from "./components/neo-tournament-category-list-view/tournament-category-list.model";
-import { TournamentCategoryList, } from "./components/neo-tournament-category-list-item-view/tournament-category-list-item.model";
+import { TournamentCategoryListItemI, } from "./components/neo-tournament-category-list-item-view/tournament-category-list-item.model";
+import { TournamentCategoryList, } from "./components/neo-tournament-category-list-view/tournament-category-list.model";
+import { TennisMatchI, } from "./components/tennis-match/tennis-match.model";
+import { TennisTeamI, } from "./components/tennis-match-team/tennis-match-team.model";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
-    }
     interface NeoTournamentCategoryListItemView {
         "data": TournamentCategoryListItemI;
     }
     interface NeoTournamentCategoryListView {
         "data": TournamentCategoryList;
     }
+    interface TennisMatch {
+        "match": TennisMatchI;
+    }
+    interface TennisMatchTeam {
+        "team": TennisTeamI;
+    }
+    interface TennisMatches {
+    }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-    }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
-    };
     interface HTMLNeoTournamentCategoryListItemViewElement extends Components.NeoTournamentCategoryListItemView, HTMLStencilElement {
     }
     var HTMLNeoTournamentCategoryListItemViewElement: {
@@ -48,46 +38,64 @@ declare global {
         prototype: HTMLNeoTournamentCategoryListViewElement;
         new (): HTMLNeoTournamentCategoryListViewElement;
     };
+    interface HTMLTennisMatchElement extends Components.TennisMatch, HTMLStencilElement {
+    }
+    var HTMLTennisMatchElement: {
+        prototype: HTMLTennisMatchElement;
+        new (): HTMLTennisMatchElement;
+    };
+    interface HTMLTennisMatchTeamElement extends Components.TennisMatchTeam, HTMLStencilElement {
+    }
+    var HTMLTennisMatchTeamElement: {
+        prototype: HTMLTennisMatchTeamElement;
+        new (): HTMLTennisMatchTeamElement;
+    };
+    interface HTMLTennisMatchesElement extends Components.TennisMatches, HTMLStencilElement {
+    }
+    var HTMLTennisMatchesElement: {
+        prototype: HTMLTennisMatchesElement;
+        new (): HTMLTennisMatchesElement;
+    };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
         "neo-tournament-category-list-item-view": HTMLNeoTournamentCategoryListItemViewElement;
         "neo-tournament-category-list-view": HTMLNeoTournamentCategoryListViewElement;
+        "tennis-match": HTMLTennisMatchElement;
+        "tennis-match-team": HTMLTennisMatchTeamElement;
+        "tennis-matches": HTMLTennisMatchesElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
-    }
     interface NeoTournamentCategoryListItemView {
         "data"?: TournamentCategoryListItemI;
     }
     interface NeoTournamentCategoryListView {
         "data"?: TournamentCategoryList;
     }
+    interface TennisMatch {
+        "match"?: TennisMatchI;
+    }
+    interface TennisMatchTeam {
+        "team"?: TennisTeamI;
+    }
+    interface TennisMatches {
+    }
     interface IntrinsicElements {
-        "my-component": MyComponent;
         "neo-tournament-category-list-item-view": NeoTournamentCategoryListItemView;
         "neo-tournament-category-list-view": NeoTournamentCategoryListView;
+        "tennis-match": TennisMatch;
+        "tennis-match-team": TennisMatchTeam;
+        "tennis-matches": TennisMatches;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "neo-tournament-category-list-item-view": LocalJSX.NeoTournamentCategoryListItemView & JSXBase.HTMLAttributes<HTMLNeoTournamentCategoryListItemViewElement>;
             "neo-tournament-category-list-view": LocalJSX.NeoTournamentCategoryListView & JSXBase.HTMLAttributes<HTMLNeoTournamentCategoryListViewElement>;
+            "tennis-match": LocalJSX.TennisMatch & JSXBase.HTMLAttributes<HTMLTennisMatchElement>;
+            "tennis-match-team": LocalJSX.TennisMatchTeam & JSXBase.HTMLAttributes<HTMLTennisMatchTeamElement>;
+            "tennis-matches": LocalJSX.TennisMatches & JSXBase.HTMLAttributes<HTMLTennisMatchesElement>;
         }
     }
 }
