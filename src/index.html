@@ -17,6 +17,15 @@
     }
   </style> -->
 
+  <style>
+    body {
+      overflow: auto !important;
+      height: auto !important;
+      /* max-height: auto !important; */
+      position: initial !important;
+    }
+  </style>
+
   <link data-n-head="true" href="https://fonts.googleapis.com/css?family=Francois+One|Barlow+Condensed|Open+Sans:300,400,600,700" rel="stylesheet"/>
 
   <script type="module" src="/build/neo.esm.js"></script>
@@ -34,33 +43,33 @@
   <neo-tournament-category-list-view>
   </neo-tournament-category-list-view>
   <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-          const tournamentCategoryListViewData = {
-            categories: [
-              {
-                title: 'Men Masters'
-              },
-              {
-                title: 'Men Advanced'
-              },
-              {
-                title: 'Men Amateur'
-              },
-              {
-                title: 'Men Double'
-              },
-              {
-                title: 'Mix Double'
-              },
-              {
-                title: 'Juniors'
-              },
-            ]
-          }
-          const tournamentCategoryListView = document.querySelector('neo-tournament-category-list-view');
-          tournamentCategoryListView.data = tournamentCategoryListViewData;
-        })
-    </script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        const tournamentCategoryListViewData = {
+          categories: [
+            {
+              title: 'Men Masters'
+            },
+            {
+              title: 'Men Advanced'
+            },
+            {
+              title: 'Men Amateur'
+            },
+            {
+              title: 'Men Double'
+            },
+            {
+              title: 'Mix Double'
+            },
+            {
+              title: 'Juniors'
+            },
+          ]
+        }
+        const tournamentCategoryListView = document.querySelector('neo-tournament-category-list-view');
+        tournamentCategoryListView.data = tournamentCategoryListViewData;
+      })
+  </script>
 
 </body>
 </html>

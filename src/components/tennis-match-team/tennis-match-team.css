@@ -1,5 +1,10 @@
-:host {
+:host, .test {
   display: block;
+}
+
+.table {
+  display: table;
+  width: 100%;
 }
 
 .pl-container {

@@ -11,9 +11,23 @@ export class TennisMatch implements ComponentInterface {
 
   render() {
     return (
-      <Host class="opponents">
-        <tennis-match-team team={this.match.teamA}></tennis-match-team>
-        <tennis-match-team team={this.match.teamB}></tennis-match-team>
+      <Host>
+        <a href="http://">
+          <div class="match-link">
+            <div class="match-container">
+              <table class="livescore over">
+                <tbody>
+                  <tennis-match-team
+                    team={this.match.teamA}
+                  ></tennis-match-team>
+                  <tennis-match-team
+                    team={this.match.teamB}
+                  ></tennis-match-team>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </a>
       </Host>
     );
   }
