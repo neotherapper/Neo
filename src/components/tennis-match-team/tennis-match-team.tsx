@@ -46,7 +46,7 @@ export class TennisMatchTeam implements ComponentInterface {
               </p>
             </div>
           </th>
-          {[...Array(this.numberOfSets)].map((e, i) => (
+          {[...Array(this.numberOfSets)].map((_e, i) => (
             <td
               class={
                 this.team.sets[i]
