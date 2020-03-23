@@ -9,10 +9,6 @@ import { TournamentCategoryListItemI } from './tournament-category-list-item.mod
 export class NeoTournamentCategoryListItemView implements ComponentInterface {
   @Prop() data: TournamentCategoryListItemI;
 
-  componentDidLoad() {
-    console.log(this);
-  }
-
   render() {
     return (
       <Host>

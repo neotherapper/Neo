@@ -1,0 +1,36 @@
+:host, .test {
+  display: block;
+}
+
+.table {
+  display: table;
+  width: 100%;
+}
+
+.pl-container {
+  padding: 2px 0 2px 5px;
+}
+.pl-container .player {
+  text-transform: capitalize;
+}
+.pl-container .troncate-long-name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 7.5em;
+}
+.pl-container .set-in-progress,
+.pl-container .set-winner {
+  font-weight: 700;
+}
+.pl-container .flag {
+  margin: 0 5px;
+}
+.pl-container sup {
+  font-weight: 400;
+}
+.pl-container .avatar img {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}

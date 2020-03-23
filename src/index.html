@@ -5,6 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>Neo Components</title>
 
+  <!-- <style type="text/css" media="screen, print">
+    @font-face {
+      font-family: "Francois One";
+      src: url("https://fonts.gstatic.com/s/francoisone/v14/_Xmr-H4zszafZw3A-KPSZut9wQiRmfW_Aw.woff2") format("opentype");
+    }
+
+    @font-face {
+      font-family: "Open Sans";
+      src: url("https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2") format("opentype");
+    }
+  </style> -->
+
+  <style>
+    body {
+      overflow: auto !important;
+      height: auto !important;
+      /* max-height: auto !important; */
+      position: initial !important;
+    }
+  </style>
+
+  <link data-n-head="true" href="https://fonts.googleapis.com/css?family=Francois+One|Barlow+Condensed|Open+Sans:300,400,600,700" rel="stylesheet"/>
 
   <script type="module" src="/build/neo.esm.js"></script>
   <script nomodule src="/build/neo.js"></script>
@@ -12,50 +34,42 @@
   <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
 
-  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@4.7.4/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@4.7.4/dist/ionicons/ionicons.js"></script>
+  <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@4.7.4/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@4.7.4/dist/ionicons/ionicons.js"></script> -->
 
 </head>
 <body>
-
-  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-
-  <!-- <neo-tournament-category-list-view data="'{categories:[{title: 'test'}, {title: 'omg'}]}'">
-
-  </neo-tournament-category-list-view> -->
-
+  <tennis-matches></tennis-matches>
   <neo-tournament-category-list-view>
   </neo-tournament-category-list-view>
-
-
   <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-          const tournamentCategoryListViewData = {
-            categories: [
-              {
-                title: 'Men Masters'
-              },
-              {
-                title: 'Men Advanced'
-              },
-              {
-                title: 'Men Amateur'
-              },
-              {
-                title: 'Men Double'
-              },
-              {
-                title: 'Mix Double'
-              },
-              {
-                title: 'Juniors'
-              },
-            ]
-          }
-          const tournamentCategoryListView = document.querySelector('neo-tournament-category-list-view');
-          tournamentCategoryListView.data = tournamentCategoryListViewData;
-        })
-    </script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        const tournamentCategoryListViewData = {
+          categories: [
+            {
+              title: 'Men Masters'
+            },
+            {
+              title: 'Men Advanced'
+            },
+            {
+              title: 'Men Amateur'
+            },
+            {
+              title: 'Men Double'
+            },
+            {
+              title: 'Mix Double'
+            },
+            {
+              title: 'Juniors'
+            },
+          ]
+        }
+        const tournamentCategoryListView = document.querySelector('neo-tournament-category-list-view');
+        tournamentCategoryListView.data = tournamentCategoryListViewData;
+      })
+  </script>
 
 </body>
 </html>
